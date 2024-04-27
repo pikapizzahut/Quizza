@@ -15,7 +15,7 @@ with colb:
         with st.expander("How to use?"):
             st.markdown("Use the `filter` to filter questions by topic. Go back and forth through the questions with the `Previous question` and `Next question` buttons.")
         with st.expander("Will this be updated?"):
-            st.markdown("That's the plan! I'm planning to add functionality to input your own spreadsheets/database of questions to quiz from.")
+            st.markdown("That's the plan! I'm planning to add functionality to input your own spreadsheets/database of questions to quiz from. Stay tuned!")
 
 st.divider()
 
