@@ -96,8 +96,6 @@ with st.form("QnA"):
             else:
                 # st.error("Unfortunately incorrect...", icon="🚨")
                 st.session_state['correct'][st.session_state['pointer']] = False
-            if type(question["Notes"]) == str:
-                st.write(question["Notes"])
             st.rerun()
         else:
             st.warning("You must answer with one of the options!")
@@ -105,7 +103,10 @@ with st.form("QnA"):
         st.success("You got it right!", icon="✅")
     elif st.session_state['correct'][st.session_state['pointer']] == False:
         st.error("Unfortunately incorrect...", icon="🚨")
-    
+    if st.session_state['correct'][st.session_state['pointer']] != None:
+        if type(question["Notes"]) == str:
+            st.write(question["Notes"])
+
 
 with st.sidebar:
     st.metric("Developed by :rainbow[Pikapizza]","Quizza 🍕")
